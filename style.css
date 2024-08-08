@@ -1,5 +1,86 @@
 body {
     font-family: Arial, sans-serif;
+    font-size: 18px; /* Tamaño de fuente optimizado */
+    line-height: 1.4;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    padding: 20px; /* Padding ajustado */
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em; /* Tamaño de título optimizado */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Espacio debajo de las tablas ajustado */
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 10px; /* Padding ajustado */
+    vertical-align: top;
+    font-size: 1.1em; /* Tamaño de texto ajustado */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 8px; /* Padding ajustado */
+    font-family: inherit;
+    font-size: 1.1em; /* Tamaño de texto ajustado */
+}
+
+input[type="checkbox"] {
+    margin: 0 8px 0 0; /* Espacio ajustado */
+}
+
+#generatePDF {
+    display: block;
+    width: 100%;
+    max-width: 300px; /* Ancho ajustado */
+    margin: 20px auto;
+    padding: 12px 20px; /* Padding ajustado */
+    font-size: 1.1em; /* Tamaño de texto ajustado */
+    border: none;
+    background-color: #ccc;
+    color: #000;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Ajuste para pantallas pequeñas */
+    }
+    .container {
+        padding: 10px; /* Padding reducido para pantallas pequeñas */
+    }
+    th, td {
+        padding: 8px; /* Ajuste de padding para pantallas pequeñas */
+    }
+}
+
+/*body {
+    font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     margin: 0;

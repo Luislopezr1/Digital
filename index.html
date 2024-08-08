@@ -10,106 +10,109 @@
 </head>
 <body>
     <div class="container" id="content">
-        <h1>FORMATO PARA INSPECCION TECNICA PLANEADA EN SEGURIDAD HUMANA<br>Y PROTECCION CONTRA INCENDIOS PARA EDIFICACIONES</h1>
+        <form action="">
+            <h1>FORMATO PARA INSPECCION TECNICA PLANEADA EN SEGURIDAD HUMANA<br>Y PROTECCION CONTRA INCENDIOS PARA EDIFICACIONES</h1>
         
-        <p>Número de Acta: <input type="text" name="numero_acta"></p>
-
-        <table>
-            <tr>
-                <th colspan="4">1. INFORMACION GENERAL DE LA EDIFICACION O ESTABLECIMIENTO</th>
-            </tr>
-            <tr>
-                <td colspan="4">Razón Social: <input type="text" name="razon_social" value=""></td>
-            </tr>
-            <tr>
-                <td colspan="4">Nombre del Establecimiento: <input type="text" name="nombre_establecimiento" value=""></td>
-            </tr>
-            <tr>
-                <td colspan="4">Actividad o uso de la edificación: <input type="text" name="actividad" value=""></td>
-            </tr>
-            <tr>
-                <td colspan="4">Edificación nueva ( N ) o preexistente ( P ) <input type="text" name="tipo_edificacion" maxlength="1"></td>
-            </tr>
-            <tr>
-                <td colspan="4">Dirección: <input type="text" name="direccion" value=""></td>
-            </tr>
-            <tr>
-                <td colspan="4">Georreferenciación: <input type="text" name="georeferenciacion" value=""></td>
-            </tr>
-            <tr>
-                <td colspan="4">Localidad: <input type="text" name="localidad" value=""></td>
-            </tr>
-            <tr>
-                <td colspan="4">Representante Legal o Administrado por: <input type="text" name="representante" value=""></td>
-            </tr>
-            <tr>
-                <td colspan="4">
-                    <p>Categoría de riesgo (Clasificación en función del riesgo de pérdida de vidas o amenaza de combustión) NSR-10 J.3.3</p>
-                    <div>
-                        <label><input type="checkbox" name="categoria_riesgo" value="III"> III</label>
-                        <label><input type="checkbox" name="categoria_riesgo" value="II"> II</label>
-                        <label><input type="checkbox" name="categoria_riesgo" value="I"> I</label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4">
-                    <p>Grupo de Ocupación</p>
-                    <div>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="A-1"> A-1</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="A-2"> A-2</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="C-1"> C-1</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="C-2"> C-2</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="E"> E</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="F-1"> F-1</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="F-2"> F-2</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="I-1"> I-1</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="I-2"> I-2</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="I-3"> I-3</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="I-4"> I-4</label>
-                    </div>
-                    <div>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="I-5"> I-5</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="L-1"> L-1</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="L-2"> L-2</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="L-3"> L-3</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="L-4"> L-4</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="L-5"> L-5</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="M"> M</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="P"> P</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="R-2"> R-2</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="R-3"> R-3</label>
-                        <label><input type="checkbox" name="grupo_ocupacion" value="T"> T</label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">Nit: <input type="text" name="nit" value=""></td>
-                <td colspan="2">Área Total (m²): <input type="text" name="area_total" value=""></td>
-            </tr>
-            <tr>
-                <td colspan="2">No. de Pisos: <input type="text" name="num_pisos" value=""></td>
-                <td colspan="2">No. de Ocupantes: <input type="text" name="num_ocupantes" value=""></td>
-            </tr>
-            <tr>
-                <td colspan="4">Descripción general de la edificación o establecimiento</td>
-            </tr>
-            <tr>
-                <td colspan="4"><textarea name="descripcion_general" rows="5"></textarea></td>
-            </tr>
-            <tr>
-                <td colspan="4">Descripción del almacenamiento ( A ) ( C-2 ) ( F ) ( M ) ( P )</td>
-            </tr>
-            <tr>
-                <td colspan="4"><textarea name="descripcion_almacenamiento" rows="5"></textarea></td>
-            </tr>
-            <tr>
-                <td colspan="4">Descripción Procesos críticos ( A ) ( C-2 ) ( F ) ( M ) ( P )</td>
-            </tr>
-            <tr>
-                <td colspan="4"><textarea name="descripcion_procesos" rows="5"></textarea></td>
-            </tr>
-        </table>
+            <p>Número de Acta: <input type="text" name="numero_acta"></p>
+    
+            <table>
+                <tr>
+                    <th colspan="4">1. INFORMACION GENERAL DE LA EDIFICACION O ESTABLECIMIENTO</th>
+                </tr>
+                <tr>
+                    <td colspan="4">Razón Social: <input type="text" name="razon_social" value="" required></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Nombre del Establecimiento: <input type="text" name="nombre_establecimiento" value="" required></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Actividad o uso de la edificación: <input type="text" name="actividad" value="" required></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Edificación nueva ( N ) o preexistente ( P ) <input type="text" name="tipo_edificacion" maxlength="1" required></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Dirección: <input type="text" name="direccion" value="" required></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Georreferenciación: <input type="text" name="georeferenciacion" value="" required></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Localidad: <input type="text" name="localidad" value="" required></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Representante Legal o Administrado por: <input type="text" name="representante" value="" required></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <p>Categoría de riesgo (Clasificación en función del riesgo de pérdida de vidas o amenaza de combustión) NSR-10 J.3.3</p>
+                        <div>
+                            <label><input type="checkbox" name="categoria_riesgo" value="III"> III</label>
+                            <label><input type="checkbox" name="categoria_riesgo" value="II"> II</label>
+                            <label><input type="checkbox" name="categoria_riesgo" value="I"> I</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <p>Grupo de Ocupación</p>
+                        <div>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="A-1"> A-1</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="A-2"> A-2</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="C-1"> C-1</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="C-2"> C-2</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="E"> E</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="F-1"> F-1</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="F-2"> F-2</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="I-1"> I-1</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="I-2"> I-2</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="I-3"> I-3</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="I-4"> I-4</label>
+                        </div>
+                        <div>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="I-5"> I-5</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="L-1"> L-1</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="L-2"> L-2</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="L-3"> L-3</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="L-4"> L-4</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="L-5"> L-5</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="M"> M</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="P"> P</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="R-2"> R-2</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="R-3"> R-3</label>
+                            <label><input type="checkbox" name="grupo_ocupacion" value="T"> T</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Nit: <input type="text" name="nit" value="" required></td>
+                    <td colspan="2">Área Total (m²): <input type="text" name="area_total" value="" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">No. de Pisos: <input type="text" name="num_pisos" value="" required></td>
+                    <td colspan="2">No. de Ocupantes: <input type="text" name="num_ocupantes" value="" required></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Descripción general de la edificación o establecimiento</td>
+                </tr>
+                <tr>
+                    <td colspan="4"><textarea name="descripcion_general" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Descripción del almacenamiento ( A ) ( C-2 ) ( F ) ( M ) ( P )</td>
+                </tr>
+                <tr>
+                    <td colspan="4"><textarea name="descripcion_almacenamiento" rows="5" ></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Descripción Procesos críticos ( A ) ( C-2 ) ( F ) ( M ) ( P )</td>
+                </tr>
+                <tr>
+                    <td colspan="4"><textarea name="descripcion_procesos" rows="5"  ></textarea></td>
+                </tr>
+            </table>    
+        </form>
+        
     </div>
     <button id="generatePDF">Generar PDF</button>
 
