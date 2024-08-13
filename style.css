@@ -55,6 +55,19 @@ input[type="text"], textarea {
 input[type="checkbox"] {
     margin: 0 5px 0 0;
 }
+.bt{
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #ccc;
+    color: #000;
+    border-radius: 20px;
+    cursor: pointer;
+}
 #generatePDF {
     display: block;
     width: 100%;
@@ -67,6 +80,12 @@ input[type="checkbox"] {
     color: #000;
     border-radius: 20px;
     cursor: pointer;
+    text-decoration: none;
+
+}
+.li{
+    text-decoration: none;
+    color: #000;
 }
 @media (max-width: 768px) {
     body {
