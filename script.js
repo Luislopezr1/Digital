@@ -1,36 +1,37 @@
-document.getElementById('generatePDF').addEventListener('click', function() {
-    const { jsPDF } = window.jspdf;
+// Import necessary libraries
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 
-    html2canvas(document.getElementById('content'), { scale: 2 }).then(canvas => {
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF('p', 'mm', [216, 356]); 
+// Function to download PDF
+function downloadPDF() {
+  const element = document.body; // or any specific element you want to capture
+  const pdfWidth = 8.5; // Width of legal size paper in inches
+  const pdfHeight = 14; // Height of legal size paper in inches
+  const scale = 2; // Increase scale for better quality
 
-        
-        const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight = pdf.internal.pageSize.getHeight();
+  html2canvas(element, { scale: scale }).then((canvas) => {
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF('p', 'in', [pdfWidth, pdfHeight]);
+    
+    const imgWidth = pdfWidth;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+    let heightLeft = imgHeight;
+    let position = 0;
 
-        let imgHeight = (canvas.height * pdfWidth) / canvas.width;
-        let position = 0;
+    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+    heightLeft -= pdfHeight;
 
-        
-        while (position < canvas.height) {
-            const pageCanvas = document.createElement('canvas');
-            pageCanvas.width = canvas.width;
-            pageCanvas.height = Math.min(canvas.height - position, pdfHeight * canvas.width / pdfWidth);
+    while (heightLeft >= 0) {
+      position = heightLeft - imgHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pdfHeight;
+    }
+    
+    pdf.save('document.pdf');
+  });
+}
 
-            const ctx = pageCanvas.getContext('2d');
-            ctx.drawImage(canvas, 0, position, pageCanvas.width, pageCanvas.height, 0, 0, pageCanvas.width, pageCanvas.height);
-            const pageImgData = pageCanvas.toDataURL('image/png');
-
-            pdf.addImage(pageImgData, 'PNG', 0, 0, pdfWidth, (pageCanvas.height * pdfWidth) / pageCanvas.width);
-
-            position += pageCanvas.height;
-
-            if (position < canvas.height) {
-                pdf.addPage();
-            }
-        }
-
-        pdf.save('formato_inspeccion.pdf');
-    });
-});
+// Add event listener to a button
+document.getElementById('downloadBtn').addEventListener('click', downloadPDF);
